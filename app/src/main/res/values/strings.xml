@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CleanSlate</string>
+    <string name="test_countdown">test countdown</string>
+    <string name="go">Go!</string>
+</resources>
