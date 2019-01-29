@@ -8,7 +8,7 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="loginFragment">
+                  <entry key="countdownFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -31,7 +31,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_mainFragment_to_loginFragment">
+                            <entry key="action_mainFragment_to_countdownFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

@@ -1,7 +1,11 @@
 package com.rrouton.android.cleanslate
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.support.DaggerAppCompatActivity
+import dagger.android.support.HasSupportFragmentInjector
+import javax.inject.Inject
 
 /**
  * Notes:
@@ -15,10 +19,15 @@ import androidx.appcompat.app.AppCompatActivity
  *  - Kotlin synthetic binding
  */
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity(), HasSupportFragmentInjector {
+
+    @Inject
+    lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
     }
+
+    override fun supportFragmentInjector() = fragmentInjector
 }

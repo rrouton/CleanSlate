@@ -1,4 +1,4 @@
-package com.rrouton.android.cleanslate.ui.login
+package com.rrouton.android.cleanslate.ui.countdown
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,7 +7,7 @@ import java.util.*
 import javax.inject.Inject
 import kotlin.concurrent.schedule
 
-class LoginViewModel @Inject constructor() : ViewModel() {
+class CountdownViewModel @Inject constructor() : ViewModel() {
 
     private val _countResult: MutableLiveData<Int> = MutableLiveData()
     private var count: Int = 0

@@ -2,8 +2,8 @@ package com.rrouton.android.cleanslate.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.rrouton.android.cleanslate.viewModel.ClientViewModelFactory
-import com.rrouton.android.cleanslate.ui.login.LoginViewModel
+import com.rrouton.android.cleanslate.viewModel.DaggerViewModelFactory
+import com.rrouton.android.cleanslate.ui.countdown.CountdownViewModel
 
 import dagger.Binds
 import dagger.Module
@@ -14,11 +14,11 @@ import dagger.multibindings.IntoMap
 abstract class ViewModelModule {
     @Binds
     @IntoMap
-    @ViewModelKey(LoginViewModel::class)
-    abstract fun bindUserViewModel(userViewModel: LoginViewModel): ViewModel
+    @ViewModelKey(CountdownViewModel::class)
+    abstract fun bindCountdownViewModel(countdownViewModel: CountdownViewModel): ViewModel
 
     //Add new view model bindings above
 
     @Binds
-    abstract fun bindViewModelFactory(factory: ClientViewModelFactory): ViewModelProvider.Factory
+    abstract fun bindViewModelFactory(factory: DaggerViewModelFactory): ViewModelProvider.Factory
 }

@@ -1,4 +1,4 @@
-package com.rrouton.android.cleanslate.ui.login
+package com.rrouton.android.cleanslate.ui.countdown
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,26 +9,26 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.rrouton.android.cleanslate.R
-import com.rrouton.android.cleanslate.viewModel.ClientViewModelFactory
-import com.rrouton.android.cleanslate.databinding.LoginFragmentBinding
+import com.rrouton.android.cleanslate.viewModel.DaggerViewModelFactory
+import com.rrouton.android.cleanslate.databinding.CountdownFragmentBinding
 import dagger.android.support.DaggerFragment
-import kotlinx.android.synthetic.main.login_fragment.*
+import kotlinx.android.synthetic.main.countdown_fragment.*
 import javax.inject.Inject
 
-class LoginFragment : DaggerFragment() {
+class CountdownFragment : DaggerFragment() {
 
     @Inject
-    lateinit var viewModeFactory: ClientViewModelFactory
+    lateinit var viewModeFactory: DaggerViewModelFactory
 
-    lateinit var viewModel: LoginViewModel
+    lateinit var viewModel: CountdownViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         //Set the view model and data binding
-        viewModel = ViewModelProviders.of(this, this.viewModeFactory).get(LoginViewModel::class.java)
-        val binding: LoginFragmentBinding = DataBindingUtil.inflate(layoutInflater, R.layout.login_fragment, container, false)
+        viewModel = ViewModelProviders.of(this, this.viewModeFactory).get(CountdownViewModel::class.java)
+        val binding: CountdownFragmentBinding = DataBindingUtil.inflate(layoutInflater, R.layout.countdown_fragment, container, false)
         binding.viewmodel = viewModel
         binding.setLifecycleOwner(this)
         return binding.root

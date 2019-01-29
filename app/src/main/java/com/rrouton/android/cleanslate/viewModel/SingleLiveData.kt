@@ -4,7 +4,7 @@ package com.rrouton.android.cleanslate.viewModel
  * Used as a wrapper for data that is exposed via a LiveData that represents an event.  This enables us to use
  * LiveData's lifecycle aware observer behavior for one-time events, such as navigation.
  */
-open class Event<out T>(private val content: T) {
+open class SingleLiveData<out T>(private val content: T) {
 
     var hasBeenHandled = false
         private set // Allow external read but not write

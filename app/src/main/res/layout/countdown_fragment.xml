@@ -6,7 +6,7 @@
     <data>
         <variable
                 name="viewmodel"
-                type="com.rrouton.android.cleanslate.ui.login.LoginViewModel" />
+                type="com.rrouton.android.cleanslate.ui.countdown.CountdownViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -20,7 +20,7 @@ class AppModule {
     }
 
     /**
-     * Example of another, but not used now
+     * Example of another app level dependency, but not used now fyi
      */
     @Provides
     @Singleton
