@@ -18,7 +18,7 @@ import javax.inject.Inject
 class CountdownFragment : DaggerFragment() {
 
     @Inject
-    lateinit var viewModeFactory: DaggerViewModelFactory
+    lateinit var viewModelFactory: DaggerViewModelFactory
 
     lateinit var viewModel: CountdownViewModel
 
@@ -27,7 +27,7 @@ class CountdownFragment : DaggerFragment() {
         savedInstanceState: Bundle?
     ): View {
         //Set the view model and data binding
-        viewModel = ViewModelProviders.of(this, this.viewModeFactory).get(CountdownViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, this.viewModelFactory).get(CountdownViewModel::class.java)
         val binding: CountdownFragmentBinding = DataBindingUtil.inflate(layoutInflater, R.layout.countdown_fragment, container, false)
         binding.viewmodel = viewModel
         binding.setLifecycleOwner(this)
