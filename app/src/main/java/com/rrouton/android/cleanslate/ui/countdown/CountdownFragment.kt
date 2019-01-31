@@ -38,7 +38,7 @@ class CountdownFragment : DaggerFragment() {
         super.onActivityCreated(savedInstanceState)
 
         viewModel.countResult()
-            .observe(this, Observer {
+            .observe(viewLifecycleOwner, Observer {
                 activity?.runOnUiThread {
                     Toast.makeText(activity, it.toString(),
                         Toast.LENGTH_LONG).show()
